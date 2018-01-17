@@ -1,10 +1,11 @@
-Build Tools
-===========
+Build Tools: Gulp / Pug / Bootstrap
+===================================
 
-A collection of build tools to use as starting points. Broken up into different branches for different builds.
+Static site generation using...
 
-### react-webpack
+- Gulp
+- Pug
+- Boostrap 4 - Beta 3
 
-React, Webpack, Webpack-Dev-Server.
 
 _Updated: 1/17/18_
