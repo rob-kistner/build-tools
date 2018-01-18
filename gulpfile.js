@@ -36,7 +36,7 @@ gulp.task('scss', () => {
         .pipe(scss({
             outputStyle: 'expanded'
         }).on('error', scss.logError))
-        // .pipe(autoprefixer())
+        .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(Paths.DIST_CSS))
         .pipe(browsersync.reload({ stream: true }))
