@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.3.2/libexec/bin/yarn.js add -D webpack-node-externals
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.3.2/libexec/bin/yarn.js add -D uglifyjs-webpack-plugin
 
 PATH: 
   /Users/RobK/.composer/vendor/bin:/Users/RobK/.rbenv/shims:/Users/RobK/.rvm/gems/ruby-2.3.1/bin:/Users/RobK/.rvm/gems/ruby-2.3.1@global/bin:/Users/RobK/.rvm/rubies/ruby-2.3.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/RobK/.rvm/bin
