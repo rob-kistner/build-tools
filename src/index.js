@@ -9,7 +9,7 @@ class App extends React.Component
     render() {
         return (
             <div>
-                <h2>React / Webpack Tooling</h2>
+                <h2>React &amp; Webpack Tooling</h2>
                 <hr/>
                 <ImportedComponent />
             </div>

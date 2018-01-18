@@ -14,6 +14,7 @@ module.exports = {
             }
         ]
     },
+    watch: true,
     plugins: [new HtmlWebpackPlugin({
         template: './src/index.html'
     })]
