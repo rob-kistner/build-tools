@@ -1,38 +1,42 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '',
-        filename: './js/bundle.js'
+        path: path.resolve(__dirname, 'public'),
+        filename: 'bundle.js'
     },
-    devtool: 'source-map',
     module: {
         rules: [
             {
-                test: /\.js$/,
-                use: 'babel-loader',
-                exclude: /(node_modules)/
-            },
-            {
-                test: /\.scss$/,
+                test: /\.(css|scss)$/,
                 use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
                     use: [
                         {
-                            loader: 'css-loader'
+                            loader: 'css-loader',
+                            options: {
+                                // minimize: true || {/*css nano options*/}
+                            }
+                        },
+                        // {
+                        //     loader: 'postcss-loader'
+                        // },
+                        {
+                            loader: 'resolve-url-loader'
                         },
                         {
-                            loader: 'sass-loader',
-                            options: {}
-                        }],
-                    // style-loader for development
-                    fallback: 'style-loader'
+                            loader: 'sass-loader?sourceMap'
+                        }
+                    ],
+
                 })
+            },
+            {
+                test: /\.(js)$/,
+                use: 'babel-loader'
             }
         ]
     },
@@ -40,9 +44,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new ExtractTextPlugin({
-            filename: './css/styles.css'
-        }),
-        // new UglifyJSPlugin()
-    ]
+        new ExtractTextPlugin('styles.css')
+    ],
+    devtool: '#eval-source-map'
 }
