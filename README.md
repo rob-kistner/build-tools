@@ -5,6 +5,11 @@ A collection of build tools to use as starting points. Broken up into different 
 
 ### react-webpack
 
-React, Webpack, Webpack-Dev-Server.
+- React
+- SASS
+- Webpack
+- Webpack-Dev-Server
 
-_Updated: 1/17/18_
+_Updated: 2/4/18_
+
+Extended support for SASS and inserted placeholder PostCSS loader, still needs to test with PostCSS using a config file and plugins.
