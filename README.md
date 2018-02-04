@@ -6,7 +6,7 @@ A collection of build tools to use as starting points. Broken up into different 
 
 ### [react-webpack](https://github.com/rob-kistner/build-tools/tree/react-webpack)
 
-**React, Webpack &amp; SASS running over Webpack-Dev-Server** | Updated: 1/17/18
+**React, Webpack &amp; SASS running over Webpack-Dev-Server** | Updated: 2/4/18
 
 Admittedly, the react cli build-tool that Facebook puts out is a lot easier. Including this for general education more than anything else.
 
